@@ -1,0 +1,113 @@
+<html>
+ 
+<body style=" margin-left: 225px; width: 80%; border-color: red" >
+ <div style="background-color: white; border: solid black; padding: 5px; width: 80%;">
+<table border="1" align="center" cellpadding="10" width="800">
+<tr>
+    <th colspan = "7" bgcolor = "Black" style="color: #FFFAF0"> Mi perfil </ th>
+</tr>
+ 
+<tr>
+         <th bgcolor = "white"> Nombre: </ th>
+         <td> Kelvin J. González M.</ td>   
+         <td rowspan="5" width="30" p style="position: relative; left: 75px"><a href="/stylesheets/Curriculum.JPG"><img border="0" style="position:relative;" src="/stylesheets/Curriculum.JPG" />  
+
+</tr>
+ <tr>
+  <th bgcolor="black" style="color: #FFFAF0"> C.I: </th>
+  <td>27.863.836</td>
+ </tr>
+<tr>
+         <th bgcolor = "white"> Fecha de nacimiento: <p>Edad:</p> </ th>
+    <td>23/02/2000 <p>22 años</p></td>
+      
+</tr>
+ <tr>
+       
+      <th bgcolor = "black" style="color: #FFFAF0"> Lugar de nacimiento: </ th>
+         <td> Maracay-Edo Aragua </ td>
+</tr>
+<tr>
+         
+         
+</tr>
+ 
+<tr>
+           <th bgcolor = "white"> Dirección: </ th>
+           <td> Calle Ezequiel Zamora, Casa 13-1 </ td>
+           <th bgcolor = "black" style="color: #FFFAF0"> Telefonos </ th>
+           <td> 0412-889-37-74 <p> 0244-386-32-24</p> </ td>
+          </td>
+</tr>
+ </table>
+ <br>
+ <br>
+<fieldset  style="margin-bottom: 10px; background-color: #000000 ">
+           <legend style="border-radius: 20px; padding: 5px; color: black; background:  #778899 ">Estudios Realizados:</legend>
+           
+  <ul>
+       <p style="color: white"> > Primaria: U.E.E Simon Rodríguez - Edo Aragua </p>
+       <p style="color: white"> > Secundaria: U.E.T.P San Luis Rey, Tecnico Medio Mencion Mecanica Automotriz - Edo Aragua </ p>
+       <p style="color: white"> > Universidad: Universidad Romulo Gallegos, San juan - Edo Guarico </ p>
+    
+
+    </ul>
+</fieldset>
+ 
+ <fieldset>
+  <legend style="border-radius: 20px; padding: 5px; color: white; background:   #000000"> Experiencia Laboral</legend>
+ <ul>
+    > Taller de Mecanica Automotriz (Tecni Servicios Ares C.A.) durante 3 meses como Asistente Mecanico
+    
+ </ul>
+
+</fieldset>
+
+<fieldset style="margin-bottom: 10px; background-color: #000000 ">
+           <legend style="border-radius: 20px; padding: 5px; color: black; background:  #778899 "> Redes </legend>
+   <ul> 
+         <p style="color: white"> > Facebook: <a href="https://www.facebook.com/kelvin.maure">Kelvin Maure</a>  </p>
+         <p style="color: white"> > Instagram: <a href="https://www.instagram.com/kelvinmaure/"> Kelvin Maure</a></p>
+         <p style="color: white"> > Correo: josemaure2018@gmail.com</ p>
+</ul> 
+</fieldset>
+ 
+<fieldset >
+           <legend style="border-radius: 20px; padding: 5px; color: black; background:  #778899 " > Habilidades y Destrezas </legend>
+    
+         <p> > Responsabilidad <br> > Capacidad de trabajar en equipo <br> > Creativo <br> > Solucion de problemas <br> > Empatía <br> > Organizacion <br> > Flexibilidad</ p>
+         <p> </ p>
+         <p> </ p>
+</fieldset>
+<form action="/" method="post">
+ <fieldset style="margin-bottom: 10px; background-color: #000000 ">
+           <legend style="border-radius: 20px; padding: 5px; color: black; background:  #778899 "> Contactame </legend>
+  <label for="email" style="color: white">Correo electrónico:</label><br> 
+    <br>
+    <input value='<% obtener.email%>' type="email" id="email" name="email" placeholder="Ingrese su correo" required="true">
+
+
+<br>
+<br>
+   
+             <label for="name" style="color: white"  >Nombre:</label><br>
+             <br>
+    <input value='<% obtener.nombre%>' type="text" id="name" name="nombre" value="" placeholder="Ingrese su nombre" required="true">
+
+<br>
+<br>
+  <label for="message" style="color: white">Comentario</label><br>
+  <br>
+   <textarea  style="resize: none; " rows="6" type="textarea" required="true"  name="comentario" placeholder="Ingrese su comentario"></textarea> <% obtener.comentario%>
+      
+    </textarea>
+    <br>
+    <br>
+ <button type="submit">Enviar mensaje</button>
+</fieldset>
+</form>
+ </div>
+
+</body>
+ 
+</html>

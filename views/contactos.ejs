@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title >Contactos</title>
+</head>
+<body bgcolor="black"> 
+<h1 align="Center" style="color: White"> <b>Contactos</b></h1>
+<br>
+<table align="Center">
+  <thead>
+<tr>
+
+
+  <th scope="col"><span style="
+        background-color:   #00FFFF; 
+        border-radius: 5px;
+        padding: 5px 10px;">Email</span></th>
+
+
+    <th scope="col"><span style="
+        background-color:   #00FFFF; 
+        border-radius: 5px;
+        padding: 5px 10px;">Nombre </th>
+    
+    
+
+  <th scope="col"><span style="
+        background-color:   #00FFFF; 
+        border-radius: 5px;
+        padding: 5px 10px;">Comentario</th>
+  
+  
+
+  <th scope="col"><span style="
+        background-color:   #00FFFF; 
+        border-radius: 5px;
+        padding: 5px 10px;"> Fecha-Hora</th>
+  
+
+
+
+
+  <th scope="col"><span style="
+        background-color:   #00FFFF; 
+        border-radius: 5px;
+        padding: 5px 10px;">IP </th>
+
+</tr>
+ </thead>
+ <tbody style="color: white">
+   <% for (const tarea of obtener) {  %>
+   <tr>
+     
+    <th><%= tarea.email%></th>
+  <th><%= tarea.nombre%></th>
+  <th><%= tarea.comentario%></th>
+  <th><%= tarea.fecha%></th>
+  <th><%= tarea.ip%></th>
+   </tr>
+ <%  } %>
+ </tbody>
+</table>
+
+
+  </div>
+</body>
+</html>
