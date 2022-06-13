@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const sqlite3=require('sqlite3').verbose();
 const path = require('path');
+const fetch = require('node-fetch')
 
 const basededatos=path.join(__dirname,"BD","BD.db");
 const bd=new sqlite3.Database(basededatos, err =>{ 
@@ -12,7 +13,7 @@ if (err){
 }
 })
 
-const create="CREATE TABLE IF NOT EXISTS contactos(email VARCHAR(20),nombre VARCHAR(20), comentario TEXT,fecha DATATIME,ip TEXT);";
+const create="CREATE TABLE IF NOT EXISTS contactos(email VARCHAR(20),nombre VARCHAR(20), comentario TEXT,fecha DATATIME,ip TEXT,ubi VARCHAR(20));";
 
 bd.run(create,err=>{
 	if (err){
@@ -41,6 +42,18 @@ router.post('/',(req,res)=>{
   	var segundos = hoy.getSeconds()
   	var hora = horas + ':' + minutos + ':' + segundos + ' '
   	var fecha = hoy.getDate() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getFullYear() + '//' + hora;
+	const url = 'http://www.geoplugin.net/json.gp?ip=' + ip;
+	//fetch('http://www.geoplugin.net/json.gp?ip=' + ip_client)
+    // Exito
+	ip_rick = '186.92.150.56'
+	let country_ip;
+    fetch('http://www.geoplugin.net/json.gp?ip=' + ip_rick)
+    .then(response => response.json())
+    .then(json => {country_ip = json.geoplugin_countryName
+
+    }
+);
+
 	var ip = req.headers["x-forwarded-for"];
   	if (ip){
     var list = ip.split(",");
@@ -48,8 +61,8 @@ router.post('/',(req,res)=>{
  	 } else {
 	  ip = req.connection.remoteAddress;
   	}
-	const sql="INSERT INTO contactos(nombre, email, comentario, fecha ,ip) VALUES (?,?,?,?,?)";
-	const nuevos_mensajes=[req.body.nombre, req.body.email, req.body.comentario,fecha,ip];
+	const sql="INSERT INTO contactos(nombre, email, comentario, fecha ,ip,ubi) VALUES (?,?,?,?,?,?)";
+	const nuevos_mensajes=[req.body.nombre, req.body.email, req.body.comentario,fecha,ip, country_ip];
 	bd.run(sql, nuevos_mensajes, err =>{
 	if (err){
 		return console.error(err.message);

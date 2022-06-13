@@ -1,4 +1,16 @@
-<html>
+<html>  
+ <head>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FDF1R09R5Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FDF1R09R5Q');
+</script>
+ </head>
  
 <body style=" margin-left: 225px; width: 80%; border-color: red" >
  <div style="background-color: white; border: solid black; padding: 5px; width: 80%;">
@@ -99,11 +111,17 @@
   <label for="message" style="color: white">Comentario</label><br>
   <br>
    <textarea  style="resize: none; " rows="6" type="textarea" required="true"  name="comentario" placeholder="Ingrese su comentario"></textarea> <% obtener.comentario%>
-      
+     
     </textarea>
+    
+       <input type="hidden" name="ubi" value="<%=obtener.ubi%>">
+      
     <br>
     <br>
+  
  <button type="submit">Enviar mensaje</button>
+
+<div class="g-recaptcha"data-sitekey="6Lc3sRwgAAAAAHDklnCcR4-r8N-_PJapImXQkSWC" >  </div>
 </fieldset>
 </form>
  </div>
