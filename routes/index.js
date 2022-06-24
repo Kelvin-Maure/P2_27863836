@@ -85,7 +85,7 @@ router.post('/login', (req,res) => {
 	
 });
 
-router.get('/login/federated/google', passport.authenticate('google'));
+//router.get('/login/federated/google', passport.authenticate('google'));
 
 
 passport.use(new GoogleStrategy(
@@ -106,7 +106,7 @@ passport.use(new GoogleStrategy(
 
 
 
-	  router.get('/redirect/google', passport.authenticate('google', {
+	  router.get('/google/callback', passport.authenticate('google', {
 		successRedirect: '/contactos',
 		failureRedirect: '/login'
 	  }));
