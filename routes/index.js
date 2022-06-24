@@ -92,7 +92,7 @@ passport.use(new GoogleStrategy(
     {
       clientID: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SC,
-      callbackURL: "https://nemesis2022.herokuapp.com/redirect/google",
+      callbackURL: "http://nemesis2022.herokuapp.com/google/callback",
 	  scope: [
 		"https://www.googleapis.com/auth/userinfo.profile",
 		"https://www.googleapis.com/auth/userinfo.email",
@@ -138,7 +138,7 @@ router.post('/',(req,res)=>{
 
    let cacha;
   	const requi = req.body['g-recaptcha-response']
-	const priv = process.env.API_PRIVATE;
+	const priv = process.env.KEY_PRIVATE;
 	const url = `https://www.google.com/recaptcha/api/siteverify?secret=${priv}&response=${requi}`;
 	fetch(url, {
     method: 'post',
