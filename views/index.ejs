@@ -1,4 +1,4 @@
-<html>  
+<html prefix="og: https://ogp.me/ns#">  
  <head>
   <script src="https://www.google.com/recaptcha/api.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -10,6 +10,11 @@
 
   gtag('config', 'G-FDF1R09R5Q');
 </script>
+<meta property="og:title" content="Curriculum" />
+<meta property="og:type" content="profile" />
+<meta property="og:url" content="http://nemesis2022.herokuapp.com/" />
+<meta property="og:image" content="http://nemesis2022.herokuapp.com/stylesheets/Curriculum.JPG" />
+
  </head>
  
 <body style=" margin-left: 225px; width: 80%; border-color: red" >
@@ -104,7 +109,7 @@
    
              <label for="name" style="color: white"  >Nombre:</label><br>
              <br>
-    <input value='<% obtener.nombre%>' type="text" id="name" name="nombre" value="" placeholder="Ingrese su nombre" required="true">
+    <input value='<%=obtener.nombre%>' type="text" id="name" name="nombre" value="" placeholder="Ingrese su nombre" required="true">
 
 <br>
 <br>
@@ -113,15 +118,21 @@
    <textarea  style="resize: none; " rows="6" type="textarea" required="true"  name="comentario" placeholder="Ingrese su comentario"></textarea> <% obtener.comentario%>
      
     </textarea>
-    
-       <input type="hidden" name="ubi" value="<%=obtener.ubi%>">
-      
+      <br>
     <br>
+    <div class="g-recaptcha"data-sitekey="6Lc3sRwgAAAAAHDklnCcR4-r8N-_PJapImXQkSWC" >  </div>
     <br>
   
- <button type="submit">Enviar mensaje</button>
+ <button type="submit">Enviar mensaje</button> 
 
-<div class="g-recaptcha"data-sitekey="6Lc3sRwgAAAAAHDklnCcR4-r8N-_PJapImXQkSWC" >  </div>
+ 
+ <br>
+ <br>
+ <button>
+  <a href="/login">Ir al Login </a>
+</button>
+ 
+
 </fieldset>
 </form>
  </div>
