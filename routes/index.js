@@ -85,7 +85,7 @@ router.post('/login', (req,res) => {
 	
 });
 
-//router.get('/login/federated/google', passport.authenticate('google'));
+router.get('/login/federated/google', passport.authenticate('google'));
 
 
 passport.use(new GoogleStrategy(
