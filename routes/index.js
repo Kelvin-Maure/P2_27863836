@@ -92,8 +92,8 @@ router.get('/login/federated/google', passport.authenticate('google'));
 
 passport.use(new GoogleStrategy(
     {
-	clientID: process.env.GOOGLE_ID,
-	clientSecret: process.env.GOOGLE_SC,
+	clientID: "195836981175-c9lk9b8srk5r5a2msjhbvnfr10ol11o9.apps.googleusercontent.com",
+	clientSecret: "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",
       callbackURL: "http://nemesis2022.herokuapp.com/google/callback",
 	  scope: [
 		"https://www.googleapis.com/auth/userinfo.profile",
