@@ -9,6 +9,8 @@ const passport = require ('passport');
 const { appendFile } = require('fs');
 const session = require ('express-session');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+const {I18n} = require('i18n');
+
 require('dotenv').config();
 
 
@@ -112,6 +114,22 @@ passport.use(new GoogleStrategy(
 	  }));
 
 
+	 
+	  const i18n = new I18n({
+		locales:['es','en','fr'],
+		  defaultLocale: 'es',
+		register: global,
+		directory:path.join('./', 'locales')
+	});
+
+
+
+	
+
+	
+	console.log(i18n.__('Hello'));
+
+	console.log(i18n.__('This is a test'));
 
 
 router.post('/',(req,res)=>{
@@ -202,12 +220,41 @@ router.post('/',(req,res)=>{
 
 
 
+router.get('/Spanish',(req,res) => {
+	i18n.init(req, res);
+	res.setLocale('es');;
+	res.render('index.ejs',{
+	obtener:{},
+
+})});
+
+router.get('/English',(req,res,next)=>{
+
+	  i18n.init(req, res)
+	  res.setLocale('en');
+	  res.render('index.ejs',{
+		obtener:{},
+	})
+
+})
+
+
+router.get('/Frances',(req,res,next)=>{
+
+	  i18n.init(req, res)
+	  res.setLocale('fr');
+	  res.render('index.ejs',{
+		obtener:{},
+
+
+	})
+	
+
+})
 
 
 
-router.get('/',(req,res)=>{
-	res.render('index.ejs',{obtener:{}})
-});
+
 
 
 

@@ -19,14 +19,28 @@
  
 <body style=" margin-left: 225px; width: 80%; border-color: red" >
  <div style="background-color: white; border: solid black; padding: 5px; width: 80%;">
+  
 <table border="1" align="center" cellpadding="10" width="800">
 <tr>
-    <th colspan = "7" bgcolor = "Black" style="color: #FFFAF0"> Mi perfil </ th>
+    <th  colspan = "7" bgcolor = "Black" style="color: #FFFAF0"> <strong><%= __('Mi Perfil')%></strong> </th>
 </tr>
- 
+
+<div style="text-align: center;">
+  <button>
+    <a href="/Spanish"><%= __('TraES')%> </a>
+  </button>
+  <button>
+    <a href="/English"><%= __('TraEN')%> </a>
+  </button>
+  <button data-tr="Inglés" id="btn-en">
+    <a href="/Frances"><%= __('TraFR')%> </a></button>
+</div>
+
+
+
 <tr>
-         <th bgcolor = "white"> Nombre: </ th>
-         <td> Kelvin J. González M.</ td>   
+         <th bgcolor = "white"><%= __('Nombre')%> </th>
+         <td> Kelvin J. González M.</td>   
          <td rowspan="5" width="30" p style="position: relative; left: 75px"><a href="/stylesheets/Curriculum.JPG"><img border="0" style="position:relative;" src="/stylesheets/Curriculum.JPG" />  
 
 </tr>
@@ -35,14 +49,14 @@
   <td>27.863.836</td>
  </tr>
 <tr>
-         <th bgcolor = "white"> Fecha de nacimiento: <p>Edad:</p> </ th>
-    <td>23/02/2000 <p>22 años</p></td>
+         <th bgcolor = "white" > <%= __('Fecha de Nacimiento:')%></p>  <%= __('Edad:')%> </th>
+    <td>23/02/2000 <p >22 <%= __('Años')%></p></td>
       
 </tr>
  <tr>
        
-      <th bgcolor = "black" style="color: #FFFAF0"> Lugar de nacimiento: </ th>
-         <td> Maracay-Edo Aragua </ td>
+      <th bgcolor = "black" style="color: #FFFAF0" > <%= __('Lugar de Nacimiento:')%> </th>
+         <td> Maracay-Edo Aragua </td>
 </tr>
 <tr>
          
@@ -50,72 +64,72 @@
 </tr>
  
 <tr>
-           <th bgcolor = "white"> Dirección: </ th>
-           <td> Calle Ezequiel Zamora, Casa 13-1 </ td>
-           <th bgcolor = "black" style="color: #FFFAF0"> Telefonos </ th>
-           <td> 0412-889-37-74 <p> 0244-386-32-24</p> </ td>
+           <th bgcolor = "white"> <%= __('Dirección:')%></th>
+           <td> Calle Ezequiel Zamora, Casa 13-1 </td>
+           <th bgcolor = "black" style="color: #FFFAF0"><%= __('Teléfono:')%></th>
+           <td> 0412-889-37-74  </td>
           </td>
 </tr>
  </table>
  <br>
  <br>
 <fieldset  style="margin-bottom: 10px; background-color: #000000 ">
-           <legend style="border-radius: 20px; padding: 5px; color: black; background:  #778899 ">Estudios Realizados:</legend>
+           <legend style="border-radius: 20px; padding: 5px; color: black; background:  #778899 "><%= __('Estudios Realizados')%></legend>
            
   <ul>
-       <p style="color: white"> > Primaria: U.E.E Simon Rodríguez - Edo Aragua </p>
-       <p style="color: white"> > Secundaria: U.E.T.P San Luis Rey, Tecnico Medio Mencion Mecanica Automotriz - Edo Aragua </ p>
-       <p style="color: white"> > Universidad: Universidad Romulo Gallegos, San juan - Edo Guarico </ p>
+       <p style="color: white"> > <%= __('Primaria:')%> U.E.E Simon Rodríguez - Edo Aragua </p>
+       <p style="color: white"> > <%= __('Secundaria:')%>   U.E.T.P San Luis Rey, <%= __('Técnico')%> - Edo Aragua </p>
+       <p style="color: white"> > <%= __('Universidad:')%>  Romulo Gallegos, San Juan - Edo Guarico  </p>
     
 
     </ul>
 </fieldset>
  
  <fieldset>
-  <legend style="border-radius: 20px; padding: 5px; color: white; background:   #000000"> Experiencia Laboral</legend>
+  <legend style="border-radius: 20px; padding: 5px; color: white; background:   #000000"><%= __('Experiencia Laboral')%></legend>
  <ul>
-    > Taller de Mecanica Automotriz (Tecni Servicios Ares C.A.) durante 3 meses como Asistente Mecanico
+    > <%= __('Lugar')%> (Tecni Servicios Ares C.A.) <%= __('Descrip')%>
     
  </ul>
 
 </fieldset>
 
 <fieldset style="margin-bottom: 10px; background-color: #000000 ">
-           <legend style="border-radius: 20px; padding: 5px; color: black; background:  #778899 "> Redes </legend>
+           <legend style="border-radius: 20px; padding: 5px; color: black; background:  #778899 " > <%= __('Redes Sociales')%></legend>
    <ul> 
          <p style="color: white"> > Facebook: <a href="https://www.facebook.com/kelvin.maure">Kelvin Maure</a>  </p>
          <p style="color: white"> > Instagram: <a href="https://www.instagram.com/kelvinmaure/"> Kelvin Maure</a></p>
-         <p style="color: white"> > Correo: josemaure2018@gmail.com</ p>
+         <p style="color: white"> > <%= __('Correo:')%> josemaure2018@gmail.com</p>
 </ul> 
 </fieldset>
  
 <fieldset >
-           <legend style="border-radius: 20px; padding: 5px; color: black; background:  #778899 " > Habilidades y Destrezas </legend>
+           <legend style="border-radius: 20px; padding: 5px; color: black; background:  #778899 " > <%= __('Habilidades')%> </legend>
     
-         <p> > Responsabilidad <br> > Capacidad de trabajar en equipo <br> > Creativo <br> > Solucion de problemas <br> > Empatía <br> > Organizacion <br> > Flexibilidad</ p>
-         <p> </ p>
-         <p> </ p>
+         <p> > <%= __('Responsabilidad')%> <br> > <%= __('Capacidad de trabajar en equipo')%> <br> > <%= __('Creativo')%> <br> > <%= __('Solucion de problemas')%> <br> > <%= __('Empatía')%><br> > <%= __('Organización')%> <br> > <%= __('Flexibilidad')%></p>
+         <p> </p>
+         <p> </p>
 </fieldset>
 <form action="/" method="post">
  <fieldset style="margin-bottom: 10px; background-color: #000000 ">
-           <legend style="border-radius: 20px; padding: 5px; color: black; background:  #778899 "> Contactame </legend>
-  <label for="email" style="color: white">Correo electrónico:</label><br> 
+           <legend style="border-radius: 20px; padding: 5px; color: black; background:  #778899 "> <%= __('Contactame')%></legend>
+  <label for="email" style="color: white"><%= __('Correo:')%></label><br> 
     <br>
-    <input value='<% obtener.email%>' type="email" id="email" name="email" placeholder="Ingrese su correo" required="true">
+    <input value='<% obtener.email%>' type="email" id="email" name="email" placeholder="<%= __('LCorreo:')%>" required="true">
 
 
 <br>
 <br>
    
-             <label for="name" style="color: white"  >Nombre:</label><br>
+             <label for="name" style="color: white"  ><%= __('Nombre')%></label><br>
              <br>
-    <input value='<%=obtener.nombre%>' type="text" id="name" name="nombre" value="" placeholder="Ingrese su nombre" required="true">
+    <input value='<%=obtener.nombre%>' type="text" id="name" name="nombre" value="" placeholder="<%= __('LNombre:')%>" required="true">
 
 <br>
 <br>
-  <label for="message" style="color: white">Comentario</label><br>
+  <label for="message" style="color: white"><%= __('Coment')%></label><br>
   <br>
-   <textarea  style="resize: none; " rows="6" type="textarea" required="true"  name="comentario" placeholder="Ingrese su comentario"></textarea> <% obtener.comentario%>
+   <textarea  style="resize: none; " rows="6" type="textarea" required="true"  name="comentario" placeholder="<%= __('LComent')%>"></textarea> <% obtener.comentario%>
      
     </textarea>
       <br>
@@ -123,19 +137,20 @@
     <div class="g-recaptcha"data-sitekey="6Lc3sRwgAAAAAHDklnCcR4-r8N-_PJapImXQkSWC" >  </div>
     <br>
   
- <button type="submit">Enviar mensaje</button> 
+ <button type="submit"><%= __('Send')%></button> 
 
  
  <br>
  <br>
  <button>
-  <a href="/login">Ir al Login </a>
+  <a href="/login"><%= __('Glogin')%> </a>
 </button>
  
 
 </fieldset>
 </form>
  </div>
+ 
 
 </body>
  
